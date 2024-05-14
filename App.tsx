@@ -7,7 +7,7 @@
 
 import React from 'react';
 
-import PokeApp from './src/App';
+import PokeApp from './src/branch_1_3/App';
 
 function App(): React.JSX.Element {
   return <PokeApp />;
