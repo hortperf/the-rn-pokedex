@@ -4,6 +4,9 @@ import PokemonCard from '../../../components/cards/PokemonCard';
 import {listPokemons} from '../../services/PokemonClient';
 
 export default function HomeScreen() {
+  // ================================================================================
+  // Branch 1 2
+  // ================================================================================
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
@@ -26,12 +29,17 @@ export default function HomeScreen() {
       })),
     );
   };
+  // ================================================================================
 
   return (
     <View style={styles.wrapper}>
       <FlatList
         keyExtractor={item => `pokemon_${item.id}`}
+        // ================================================================================
+        // Branch 1 2
+        // ================================================================================
         data={data}
+        // ================================================================================
         renderItem={({item}) => <PokemonCard data={item} />}
         numColumns={3}
       />
